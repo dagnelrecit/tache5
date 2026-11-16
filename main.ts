@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 })
 let Seuil = input.temperature() + 2
 pins.digitalWritePin(DigitalPin.P1, 1)
+basic.showNumber(Seuil)
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
     if (input.temperature() > Seuil) {
